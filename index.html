@@ -27,7 +27,7 @@
       --ws-muted:  #6b7f94;
     }
     * { box-sizing: border-box; }
-    body { font-family: 'Noto Sans TC', 'Inter', sans-serif; color: var(--ws-text); scroll-behavior: smooth; }
+    body { font-family: 'Noto Sans TC', 'Inter', sans-serif; color: var(--ws-text); scroll-behavior: smooth; overflow-x: hidden; }
     body.lang-en { font-family: 'Inter', 'Noto Sans TC', sans-serif; }
 
     /* Language toggle */
@@ -42,21 +42,23 @@
     .navbar-brand img { height: 38px; }
     .brand-name { color: #fff; font-size: 1.15rem; font-weight: 700; letter-spacing: 0.03em; }
     .brand-sub { color: rgba(255,255,255,0.45); font-size: 0.6rem; font-weight: 400; border-left: 1px solid rgba(255,255,255,0.25); padding-left: 0.55rem; line-height: 1.3; }
+    .navbar-brand { order: 1; }
+    .navbar-collapse { order: 2; }
     .nav-link { color: rgba(255,255,255,0.82) !important; font-weight: 500; font-size: 0.88rem; padding: 0.45rem 0.85rem !important; border-radius: 4px; transition: all 0.2s; }
     .nav-link:hover, .nav-link.active { color: #fff !important; background: rgba(255,255,255,0.13); }
     .dropdown-menu { background: #142d47; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 0.4rem; min-width: 160px; }
     .dropdown-item { color: rgba(255,255,255,0.75); font-size: 0.85rem; border-radius: 4px; padding: 0.45rem 0.9rem; transition: all 0.2s; }
     .dropdown-item:hover { background: rgba(255,255,255,0.1); color: #fff; }
-    .navbar-toggler { border-color: rgba(255,255,255,0.35); }
+    .navbar-toggler { order: 4; border-color: rgba(255,255,255,0.35); margin-left: 0.55rem; }
     .navbar-toggler-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,0.8%29' stroke-linecap='round' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
-    .lang-toggle { background: transparent; border: 1px solid rgba(255,255,255,0.35); color: rgba(255,255,255,0.75); font-size: 0.78rem; font-weight: 600; padding: 0.28rem 0.7rem; border-radius: 3px; cursor: pointer; transition: all 0.2s; letter-spacing: 0.05em; }
-    .lang-toggle:hover { background: rgba(255,255,255,0.12); color: #fff; }
+    .lang-toggle { order: 3; margin-left: auto; background: var(--ws-gold); border: 1px solid var(--ws-gold); color: #0a1a2c; font-size: 0.8rem; font-weight: 800; padding: 0.42rem 0.78rem; border-radius: 4px; cursor: pointer; transition: all 0.2s; letter-spacing: 0.08em; display: inline-flex; align-items: center; gap: 0.35rem; box-shadow: 0 4px 14px rgba(232,160,32,0.24); }
+    .lang-toggle:hover { background: #f0b03a; border-color: #f0b03a; color: #0a1a2c; transform: translateY(-1px); }
 
     /* ── Hero ── */
     #hero { background: linear-gradient(135deg, #0d2035 0%, var(--ws-navy) 50%, #1f4d7a 100%); min-height: 92vh; display: flex; align-items: center; padding-top: 72px; position: relative; overflow: hidden; }
     .hero-bg { position: absolute; inset: 0; background: url('images/h-bg01.jpg') center/cover no-repeat; opacity: 0.22; }
     .hero-pattern { position: absolute; inset: 0; background-image: radial-gradient(circle at 70% 50%, rgba(45,106,159,0.3) 0%, transparent 60%); }
-    .hero-content { position: relative; z-index: 1; }
+    .hero-content { position: relative; z-index: 1; max-width: 680px; margin-left: clamp(1rem, 5.5vw, 7rem); }
     .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(232,160,32,0.15); border: 1px solid rgba(232,160,32,0.4); color: var(--ws-gold); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; padding: 0.35rem 1rem; border-radius: 2px; margin-bottom: 1.5rem; }
     .hero-title { font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 700; color: #fff; line-height: 1.15; margin-bottom: 1.25rem; }
     .hero-title em { color: var(--ws-gold); font-style: normal; }
@@ -114,11 +116,35 @@
 
     /* ── Departments ── */
     #departments { background: var(--ws-light); }
-    .dept-card { background: #fff; border-radius: 8px; padding: 1.75rem; height: 100%; border-left: 3px solid var(--ws-gold); box-shadow: 0 2px 12px rgba(26,58,92,0.07); transition: all 0.25s; }
-    .dept-card:hover { box-shadow: 0 8px 28px rgba(26,58,92,0.13); transform: translateY(-3px); }
-    .dept-num { font-size: 2rem; font-weight: 700; color: var(--ws-gold); line-height: 1; margin-bottom: 0.75rem; }
-    .dept-card h5 { font-weight: 700; color: var(--ws-navy); margin-bottom: 0.5rem; font-size: 1rem; }
-    .dept-card p { font-size: 0.87rem; color: var(--ws-muted); line-height: 1.75; margin: 0; }
+    .dept-intro { color: var(--ws-muted); max-width: 720px; margin: 0 auto; font-size: 0.92rem; line-height: 1.8; }
+    .dept-tabs { display: flex; flex-wrap: wrap; gap: 0.55rem; justify-content: center; margin: 2rem 0 3rem; }
+    .dept-tab { display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.48rem 0.8rem; background: #fff; border: 1px solid rgba(26,58,92,0.1); border-radius: 4px; color: var(--ws-navy); text-decoration: none; font-size: 0.78rem; font-weight: 700; box-shadow: 0 2px 10px rgba(26,58,92,0.05); transition: all 0.2s; }
+    .dept-tab:hover { background: var(--ws-navy); color: #fff; transform: translateY(-2px); }
+    .dept-section { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 24px rgba(26,58,92,0.08); margin-bottom: 2rem; }
+    .dept-media { height: 100%; min-height: 360px; position: relative; overflow: hidden; background: var(--ws-navy); }
+    .dept-media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.45s; }
+    .dept-section:hover .dept-media img { transform: scale(1.04); }
+    .dept-media::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,26,44,0.05), rgba(10,26,44,0.18)); }
+    .dept-body { padding: 2.25rem; height: 100%; display: flex; flex-direction: column; justify-content: center; }
+    .dept-kicker { display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.9rem; }
+    .dept-num { font-size: 1.9rem; font-weight: 700; color: var(--ws-gold); line-height: 1; }
+    .dept-category { font-size: 0.7rem; font-weight: 700; color: var(--ws-muted); letter-spacing: 0.16em; text-transform: uppercase; }
+    .dept-body h3 { color: var(--ws-navy); font-size: clamp(1.25rem, 2.2vw, 1.65rem); font-weight: 700; margin-bottom: 0.85rem; line-height: 1.3; }
+    .dept-body p { color: var(--ws-muted); font-size: 0.9rem; line-height: 1.85; margin-bottom: 1rem; }
+    .dept-list { list-style: none; padding: 0; margin: 0.5rem 0 0; display: grid; gap: 0.55rem; }
+    .dept-list li { display: flex; gap: 0.55rem; color: var(--ws-text); font-size: 0.84rem; line-height: 1.65; }
+    .dept-list i { color: var(--ws-gold); flex-shrink: 0; margin-top: 0.2rem; }
+    .dept-equipment { background: var(--ws-light); border-radius: 6px; padding: 1rem; margin-top: 1rem; }
+    .dept-equipment h4 { color: var(--ws-navy); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.7rem; }
+    .dept-equipment ul { margin: 0; padding-left: 1.1rem; color: var(--ws-muted); font-size: 0.82rem; line-height: 1.75; }
+    .dept-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin-top: 1rem; }
+    .dept-gallery img { width: 100%; height: 118px; object-fit: cover; border-radius: 6px; }
+    .dept-quality-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+    .quality-item { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 12px rgba(26,58,92,0.07); }
+    .quality-item img { width: 100%; height: 120px; object-fit: cover; display: block; }
+    .quality-item div { padding: 0.9rem; }
+    .quality-item h4 { color: var(--ws-navy); font-size: 0.82rem; font-weight: 700; margin-bottom: 0.35rem; line-height: 1.35; }
+    .quality-item p { color: var(--ws-muted); font-size: 0.76rem; line-height: 1.6; margin: 0; }
 
     /* ── Products ── */
     #products { background: #fff; }
@@ -186,11 +212,19 @@
     /* ── Misc ── */
     @media (max-width: 768px) {
       section { padding: 60px 0; }
+      .row { --bs-gutter-x: 0; }
+      .navbar-collapse { order: 5; flex-basis: 100%; }
+      .lang-toggle { margin-left: auto; padding: 0.42rem 0.68rem; }
       .hero-stats { gap: 1.75rem; }
+      .hero-content { max-width: none; margin-left: 0; }
       .stat-n { font-size: 2rem; }
       .check-list { grid-template-columns: 1fr; }
       .form-card, .contact-card { padding: 1.5rem; }
       .tl-img-row img { height: 100px; }
+      .dept-body { padding: 1.5rem; }
+      .dept-media { min-height: 240px; }
+      .dept-gallery { grid-template-columns: 1fr 1fr; }
+      .dept-quality-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 576px) {
       .product-grid { grid-template-columns: 1fr; }
@@ -214,7 +248,12 @@
       </div>
     </a>
 
-    <button class="navbar-toggler ms-auto me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="選單">
+    <button class="lang-toggle" id="langBtn" onclick="toggleLang()" aria-label="切換語言 / Switch language">
+      <i class="bi bi-globe2"></i>
+      <span>ENG</span>
+    </button>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="選單">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -229,13 +268,21 @@
             <li><a class="dropdown-item" href="#history"><span data-zh>維新歷史</span><span data-en>History</span></a></li>
           </ul>
         </li>
-        <li class="nav-item"><a class="nav-link" href="#departments"><span data-zh>部門介紹</span><span data-en>Departments</span></a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#departments" data-bs-toggle="dropdown">
+            <span data-zh>部門介紹</span><span data-en>Departments</span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#dept-raw"><span data-zh>物料管理課</span><span data-en>Raw Material</span></a></li>
+            <li><a class="dropdown-item" href="#dept-die"><span data-zh>模具課</span><span data-en>Die Shop</span></a></li>
+            <li><a class="dropdown-item" href="#dept-extrusion"><span data-zh>擠型課</span><span data-en>Extrusion</span></a></li>
+            <li><a class="dropdown-item" href="#dept-alloy"><span data-zh>高合金課</span><span data-en>High Alloy</span></a></li>
+            <li><a class="dropdown-item" href="#dept-quality"><span data-zh>品保部</span><span data-en>Quality Control</span></a></li>
+          </ul>
+        </li>
         <li class="nav-item"><a class="nav-link" href="#products"><span data-zh>產品應用</span><span data-en>Products</span></a></li>
         <li class="nav-item"><a class="nav-link" href="#certs"><span data-zh>認證</span><span data-en>Certs</span></a></li>
         <li class="nav-item"><a class="nav-link" href="#contact"><span data-zh>聯絡我們</span><span data-en>Contact</span></a></li>
-        <li class="nav-item ms-lg-2">
-          <button class="lang-toggle" id="langBtn" onclick="toggleLang()">ENG</button>
-        </li>
       </ul>
     </div>
   </div>
@@ -556,67 +603,177 @@
       <div class="sec-label" data-zh>部門介紹</div>
       <div class="sec-label" data-en>OUR DEPARTMENTS</div>
       <h2 class="sec-title">
-        <span data-zh>五大專業部門</span>
-        <span data-en>Five Professional Divisions</span>
+        <span data-zh>五大核心部門，完整鋁擠型製程能力</span>
+        <span data-en>Five Core Divisions Across the Aluminum Extrusion Process</span>
       </h2>
       <div class="sec-bar mx-auto"></div>
+      <p class="dept-intro" data-zh>從原料備料、模具開發、擠型生產、高合金材料到品質驗證，維新以各部門的專業分工串起穩定的製造流程。</p>
+      <p class="dept-intro" data-en>From raw material preparation and die development to extrusion, high-alloy production, and quality verification, WEISHIN connects each specialized division into a stable manufacturing workflow.</p>
     </div>
-    <div class="row g-4">
-      <div class="col-md-6 col-lg-4 reveal">
-        <div class="dept-card">
-          <div class="dept-num">01</div>
-          <h5 data-zh>物料管理課</h5>
-          <h5 data-en>Raw Material Management</h5>
-          <p data-zh>國內外鋁錠採購、原料倉儲管理，嚴格進料品質檢驗，提供安全可靠的高品質庫存，確保生產所需原料穩定供應。</p>
-          <p data-en>Domestic and international aluminum ingot procurement, raw material warehouse management, strict incoming quality inspection to ensure stable supply of high-quality materials.</p>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 reveal">
-        <div class="dept-card">
-          <div class="dept-num">02</div>
-          <h5 data-zh>模具課</h5>
-          <h5 data-en>Die Shop</h5>
-          <p data-zh>全數位化模具設計，配備線切割機、數位放電加工機、CNC加工機與三次元量測儀，快速開模打樣，提供專業客製化服務。</p>
-          <p data-en>Fully digital mold design with wire cutting, CNC machining, and 3D measurement instruments. Fast mold-making and sample service with professional customization.</p>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 reveal">
-        <div class="dept-card">
-          <div class="dept-num">03</div>
-          <h5 data-zh>擠型課</h5>
-          <h5 data-en>Extrusion Division</h5>
-          <p data-zh>專精高品質、高精密鋁擠型生產，配備頂尖擠型設備，先進數位化生產管理，持續優化鋁合金擠型製造製程。</p>
-          <p data-en>Specializes in high-quality, high-precision aluminum extrusion production with top-tier equipment and advanced digital production management.</p>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 reveal">
-        <div class="dept-card">
-          <div class="dept-num">04</div>
-          <h5 data-zh>高合金課</h5>
-          <h5 data-en>High Alloy Division</h5>
-          <p data-zh>累積50年專業經驗，先進設備投入，嚴格製程管控，確保材料潔淨度與品質穩定性，專供航太及軍工高規格需求。</p>
-          <p data-en>50 years of accumulated expertise with advanced equipment and strict process control. Ensures material cleanliness for aerospace and military high-spec requirements.</p>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 reveal">
-        <div class="dept-card">
-          <div class="dept-num">05</div>
-          <h5 data-zh>品保部</h5>
-          <h5 data-en>Quality Assurance</h5>
-          <p data-zh>進料、製程及成品三階段品質管制，原物料與製程條件改善，品質問題分析與改善追蹤，確保每批產品符合ISO標準。</p>
-          <p data-en>Three-stage quality control: incoming materials, in-process, and finished products. Quality issue analysis and improvement tracking per ISO standards.</p>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 reveal">
-        <div class="dept-card" style="border-left-color:var(--ws-blue);background:var(--ws-light)">
-          <div class="dept-num" style="color:var(--ws-blue)"><i class="bi bi-quote" style="font-size:2rem"></i></div>
-          <h5 data-zh>維新品質・永續經營</h5>
-          <h5 data-en>WEISHIN Quality · Sustainable Management</h5>
-          <p data-zh>超越既往、追求卓越、誠信踏實、服務熱忱 — 這是維新半世紀來始終堅守的核心價值。</p>
-          <p data-en>Surpass the past, pursue excellence, integrity and reliability, passionate service — the core values WEISHIN has upheld for half a century.</p>
-        </div>
-      </div>
+
+    <div class="dept-tabs reveal">
+      <a class="dept-tab" href="#dept-raw"><i class="bi bi-box-seam"></i><span data-zh>物料管理</span><span data-en>Raw Material</span></a>
+      <a class="dept-tab" href="#dept-die"><i class="bi bi-tools"></i><span data-zh>模具課</span><span data-en>Die Shop</span></a>
+      <a class="dept-tab" href="#dept-extrusion"><i class="bi bi-gear-wide-connected"></i><span data-zh>擠型課</span><span data-en>Extrusion</span></a>
+      <a class="dept-tab" href="#dept-alloy"><i class="bi bi-layers-fill"></i><span data-zh>高合金課</span><span data-en>High Alloy</span></a>
+      <a class="dept-tab" href="#dept-quality"><i class="bi bi-clipboard2-check-fill"></i><span data-zh>品保部</span><span data-en>Quality Control</span></a>
     </div>
+
+    <article class="dept-section reveal" id="dept-raw">
+      <div class="row g-0">
+        <div class="col-lg-5">
+          <div class="dept-media"><img src="images/raw-01.jpg" alt="物料管理與鋁錠儲料"></div>
+        </div>
+        <div class="col-lg-7">
+          <div class="dept-body">
+            <div class="dept-kicker"><div class="dept-num">01</div><div class="dept-category">Raw Material Management</div></div>
+            <h3 data-zh>物料管理課</h3>
+            <h3 data-en>Raw Material Management</h3>
+            <p data-zh>廠內設有原料管理儲存區，國內外進口鋁錠皆經嚴格檢測把關，提供高品質且安全的庫存備料，供加工鋸切與擠型使用。</p>
+            <p data-en>WEISHIN maintains a raw material storage area for imported billets and domestic round bars. After strict quality inspection, safe stock is prepared for sawing, machining, and extrusion.</p>
+            <ul class="dept-list">
+              <li><i class="bi bi-check-circle-fill"></i><span data-zh>國外鋁錠以杜拜 DUBAI 與巴林 ALBA 為主要供應來源，提供 9 吋與 7 吋料徑鋁錠。</span><span data-en>Foreign billet supply includes DUBAI and ALBA sources for 9-inch and 7-inch alloy billets.</span></li>
+              <li><i class="bi bi-check-circle-fill"></i><span data-zh>國內鋁錠涵蓋 6061、6063、6082，以及 2014、2024、7050、7075 等高合金材料。</span><span data-en>Domestic billet supply covers 6061, 6063, 6082, plus high-strength alloys such as 2014, 2024, 7050, and 7075.</span></li>
+              <li><i class="bi bi-check-circle-fill"></i><span data-zh>出貨產品依客戶需求包裝，提供表面防護並提高運輸穩定性。</span><span data-en>Finished goods are packed according to customer needs with surface protection for safer transportation.</span></li>
+            </ul>
+            <div class="dept-gallery">
+              <img src="images/hero-depart-1.jpg" alt="物料管理區">
+              <img src="images/raw-02.jpg" alt="內外銷包裝">
+              <img src="images/raw-03.jpg" alt="成品管理">
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="dept-section reveal" id="dept-die">
+      <div class="row g-0 flex-lg-row-reverse">
+        <div class="col-lg-5">
+          <div class="dept-media"><img src="images/die-05.jpg" alt="模具課加工設備"></div>
+        </div>
+        <div class="col-lg-7">
+          <div class="dept-body">
+            <div class="dept-kicker"><div class="dept-num">02</div><div class="dept-category">Die Shop</div></div>
+            <h3 data-zh>模具課</h3>
+            <h3 data-en>Die Shop</h3>
+            <p data-zh>設有模具開發部與模具維護管理部，具備全數位化模具設計、專業製造加工與檢驗能力，能快速提供開模、打樣與客製化服務。</p>
+            <p data-en>The die shop handles mold development, maintenance, computerized design, professional fabrication, and inspection, enabling fast mold-making, samples, and customized service.</p>
+            <ul class="dept-list">
+              <li><i class="bi bi-check-circle-fill"></i><span data-zh>模具規格包含 180、220、240、280、330、400。</span><span data-en>Mold sizes include 180, 220, 240, 280, 330, and 400.</span></li>
+              <li><i class="bi bi-check-circle-fill"></i><span data-zh>模具採 ASSAB 8407-2M 熱作工具鋼製作，管材與棒材模具鑲入碳化鎢仁以提升尺寸精度。</span><span data-en>Tooling uses ASSAB 8407-2M hot working steel; pipe and rod tooling inserts tungsten carbide to improve dimensional accuracy.</span></li>
+            </ul>
+            <div class="dept-equipment">
+              <h4 data-zh>主要設備</h4><h4 data-en>Facilities</h4>
+              <ul>
+                <li data-zh>CNC 線切割加工機、CNC 綜合加工機、放電加工機、三次元精密量測機。</li>
+                <li data-en>CNC wire cutting machine, CNC machining centers, EDM machines, and coordinate measuring machine.</li>
+                <li data-zh>平面研磨機、帶鋸機、車床、銑床、模具專用噴砂機與 AFM 沖模機。</li>
+                <li data-en>Flat lapping machine, band saw, lathe, milling machines, die sand blasting machine, and AFM machine.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="dept-section reveal" id="dept-extrusion">
+      <div class="row g-0">
+        <div class="col-lg-5">
+          <div class="dept-media"><img src="images/hero-depart-2.jpg" alt="擠型生產線"></div>
+        </div>
+        <div class="col-lg-7">
+          <div class="dept-body">
+            <div class="dept-kicker"><div class="dept-num">03</div><div class="dept-category">Extrusion</div></div>
+            <h3 data-zh>擠型課</h3>
+            <h3 data-en>Extrusion Division</h3>
+            <p data-zh>專精高品質、高精密鋁擠型材生產，結合頂尖擠型製造能力、先進數位化設備與嚴格高效的流程管理，持續精進製程與品質。</p>
+            <p data-en>The extrusion division specializes in high-quality, high-precision aluminum profiles with advanced digital equipment, professional manufacturing capability, and strict process management.</p>
+            <ul class="dept-list">
+              <li><i class="bi bi-check-circle-fill"></i><span data-zh>累積 50 年擠型生產經驗，監控各項製程條件，確保產品品質一致性。</span><span data-en>With 50 years of extrusion experience, each process condition is monitored to ensure consistent product quality.</span></li>
+              <li><i class="bi bi-check-circle-fill"></i><span data-zh>依顧客需求開發製程條件，包含擠型機、擠製配套設備與矯直等後段製程。</span><span data-en>Process conditions are developed around customer requirements, including extrusion presses, post-extrusion equipment, and straightening.</span></li>
+            </ul>
+            <div class="dept-gallery">
+              <img src="images/main.jpg" alt="鋁擠型製程">
+              <img src="images/ex-04.jpg" alt="擠型設備">
+              <img src="images/ex-05.jpg" alt="擠型後段設備">
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="dept-section reveal" id="dept-alloy">
+      <div class="row g-0 flex-lg-row-reverse">
+        <div class="col-lg-5">
+          <div class="dept-media"><img src="images/hero-depart-4.jpg" alt="高合金間接擠型設備"></div>
+        </div>
+        <div class="col-lg-7">
+          <div class="dept-body">
+            <div class="dept-kicker"><div class="dept-num">04</div><div class="dept-category">High Alloy Extrusion</div></div>
+            <h3 data-zh>高合金課</h3>
+            <h3 data-en>High Alloy Extrusion</h3>
+            <p data-zh>因應航太、醫療、交通及軍事等產業升級需求，維新設立高強度合金生產部門，以 1100 噸及 1800 噸間接擠型自動化生產線，擠製 2000、5000、7000 系高品質高精密鋁合金材料。</p>
+            <p data-en>To meet aerospace, medical, transportation, and defense needs, WEISHIN established high-strength alloy production with 1100-ton and 1800-ton indirect extrusion lines for 2000, 5000, and 7000 series aluminum alloys.</p>
+            <ul class="dept-list">
+              <li><i class="bi bi-check-circle-fill"></i><span data-zh>先端設備投資與嚴格製程優化，確保材料清淨度與品質穩定性。</span><span data-en>Advanced equipment investment and strict process optimization help ensure material cleanliness and stable quality.</span></li>
+              <li><i class="bi bi-check-circle-fill"></i><span data-zh>提供穩定且高品質的高強度鋁擠型產品。</span><span data-en>Provides stable, high-quality, high-strength aluminum extrusion products.</span></li>
+            </ul>
+            <div class="dept-equipment">
+              <h4 data-zh>主要設備</h4><h4 data-en>Facilities</h4>
+              <ul>
+                <li data-zh>1800 噸間接擠型機組、1100 噸間接擠型機組。</li>
+                <li data-en>1800-ton indirect extrusion unit and 1100-ton indirect extrusion unit.</li>
+                <li data-zh>退火爐、矯直機、T4 爐。</li>
+                <li data-en>O-temper furnace, straightening machines, and T4 heat treatment furnace.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="dept-section reveal" id="dept-quality">
+      <div class="row g-0">
+        <div class="col-lg-5">
+          <div class="dept-media"><img src="images/q001.jpg" alt="品保檢測設備"></div>
+        </div>
+        <div class="col-lg-7">
+          <div class="dept-body">
+            <div class="dept-kicker"><div class="dept-num">05</div><div class="dept-category">Quality Control</div></div>
+            <h3 data-zh>品保部</h3>
+            <h3 data-en>Quality Control</h3>
+            <p data-zh>品保部負責進料、擠型製程及成品三階段品質管制，改善原物料與製程條件，並針對品質異常進行原因分析、追蹤與改善。</p>
+            <p data-en>The quality control department manages incoming material, extrusion process, and finished profile inspection, while improving material and manufacturing conditions and tracking quality anomalies.</p>
+            <ul class="dept-list">
+              <li><i class="bi bi-check-circle-fill"></i><span data-zh>每批鋁合金擠錠進料實施成分分析，出貨可提供材質成分分析證明。</span><span data-en>Each batch of alloy billets can be analyzed for composition, with certificates available for customers.</span></li>
+              <li><i class="bi bi-check-circle-fill"></i><span data-zh>材料機械性質、硬度、尺寸與金相組織皆可依需求檢測。</span><span data-en>Mechanical properties, hardness, dimensions, and metallurgical structures can be inspected as required.</span></li>
+            </ul>
+            <div class="dept-quality-grid">
+              <div class="quality-item">
+                <img src="images/p5-1.jpg" alt="30噸萬能拉力試驗機">
+                <div><h4 data-zh>30噸萬能拉力試驗機</h4><h4 data-en>Tensile Testing Machine</h4><p data-zh>測試抗拉、降伏強度與伸長率。</p><p data-en>Tests tensile strength, yield strength, and elongation.</p></div>
+              </div>
+              <div class="quality-item">
+                <img src="images/p502.jpg" alt="洛氏硬度計">
+                <div><h4 data-zh>洛氏硬度計</h4><h4 data-en>Rockwell Hardness Tester</h4><p data-zh>對每批擠型成品實施硬度抽測。</p><p data-en>Performs hardness sampling inspection for extrusion profiles.</p></div>
+              </div>
+              <div class="quality-item">
+                <img src="images/p5-3.jpg" alt="影像量測儀">
+                <div><h4 data-zh>影像量測儀</h4><h4 data-en>Optical Comparator</h4><p data-zh>自動量測擠型斷面或加工尺寸。</p><p data-en>Measures profile sections and machining dimensions.</p></div>
+              </div>
+              <div class="quality-item">
+                <img src="images/p5-4.jpg" alt="手持雷射分光儀">
+                <div><h4 data-zh>手持雷射分光儀</h4><h4 data-en>Alloy Screening</h4><p data-zh>鋁合金材質快篩與大量抽測。</p><p data-en>Rapid alloy screening and mass billet sampling.</p></div>
+              </div>
+              <div class="quality-item">
+                <img src="images/p5-5.jpg" alt="金相顯微鏡">
+                <div><h4 data-zh>金相顯微觀察</h4><h4 data-en>Metallurgical Microscope</h4><p data-zh>分析結晶組織、晶粒與材料異常。</p><p data-en>Analyzes grain structure, impurities, and material anomalies.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
   </div>
 </section>
 
@@ -1002,7 +1159,8 @@
     document.body.classList.toggle('lang-zh', !isZh);
     document.body.classList.toggle('lang-en', isZh);
     html.lang = isZh ? 'en' : 'zh-Hant';
-    btn.textContent = isZh ? '中文' : 'ENG';
+    btn.querySelector('span').textContent = isZh ? '中文' : 'ENG';
+    btn.setAttribute('aria-label', isZh ? '切換為中文' : 'Switch to English');
     document.title = isZh
       ? 'WEISHIN Industry Co., Ltd. | Taiwan Aluminum Extrusion Manufacturer'
       : '維新鋁業 | 台灣高精密鋁擠型製造商 | WEISHIN Industry Co., Ltd.';
