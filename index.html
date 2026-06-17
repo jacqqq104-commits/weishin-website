@@ -1015,7 +1015,9 @@
             <i class="bi bi-send-fill me-2" style="color:var(--ws-gold)"></i>
             <span data-zh>送出詢價單</span><span data-en>Send an Inquiry</span>
           </h5>
-          <form action="contact_form_handler.asp" method="post">
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success">
+            <input type="hidden" name="form-name" value="contact">
+            <input type="hidden" name="bot-field" style="display:none">
             <div class="row g-3">
               <div class="col-md-6">
                 <label class="form-label" data-zh>姓名 <span style="color:var(--ws-gold)">*</span></label>
