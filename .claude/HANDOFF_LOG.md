@@ -273,3 +273,32 @@ git log --oneline --decorate -5
   - `body` class 會切成 `lang-en`。
   - 按鈕文字會從 `ENG` 變成 `中文`。
 - 目前尚未 commit / push。
+
+### 8. 手機 / 漢堡選單改為右側浮層
+
+使用者提供截圖指出漢堡選單打開後整個 navbar 被撐高、頁面往下推，視覺很醜；期望選單只懸浮在右側。
+
+修改內容：
+
+- 檔案：`index.html`
+- 將 `#navMenu` / `.navbar-collapse` 改為絕對定位浮層：
+  - `position: absolute`
+  - 寬度 `min(300px, calc(100vw - 1.5rem))`
+  - 右側對齊 navbar 內距
+  - 深藍背景、8px radius、陰影
+- `.navbar-collapse.collapsing` 取消高度動畫，避免開合時撐版面。
+- `#navMenu .dropdown-menu` 改為面板內靜態展開，不再使用預設浮動 dropdown。
+- 手機斷點維持浮層寬度，不再讓 collapse 佔滿整行。
+
+驗證：
+
+- 1280px 桌機：
+  - 關閉時 navbar 高度 72px。
+  - 打開後 navbar 高度仍 72px。
+  - 選單為 300px 寬右側浮層，右緣對齊漢堡按鈕。
+  - hero `y` 維持 0，沒有被往下推。
+- 390px 手機：
+  - 打開後選單為 300px 寬右側浮層。
+  - `scrollWidth` 等於 viewport width，無橫向 overflow。
+  - hero 沒被選單推下。
+- 目前尚未 commit / push。
