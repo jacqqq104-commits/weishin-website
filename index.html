@@ -95,6 +95,25 @@
     .check-list li { display: flex; align-items: center; gap: 0.6rem; font-size: 0.88rem; font-weight: 600; }
     .check-list li i { color: var(--ws-gold); font-size: 1rem; flex-shrink: 0; }
 
+    /* ── Team ── */
+    #team { background: #fff; }
+    .team-card { background: var(--ws-light); border-radius: 12px; padding: 2rem 1.5rem; text-align: center; height: 100%; }
+    .team-photo { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; object-position: center top; border: 4px solid var(--ws-gold); margin: 0 auto 1.25rem; display: block; }
+    .team-name { font-size: 1.25rem; font-weight: 700; color: var(--ws-navy); margin-bottom: 0.25rem; }
+    .team-title { font-size: 0.85rem; color: var(--ws-gold); font-weight: 600; letter-spacing: 0.05em; margin-bottom: 1rem; }
+    .team-bio { font-size: 0.88rem; color: var(--ws-muted); line-height: 1.8; }
+
+    /* ── Catalog ── */
+    #catalog { background: var(--ws-navy); }
+    .catalog-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+    .catalog-text h2 { color: #fff; font-size: 1.8rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .catalog-text p { color: rgba(255,255,255,0.7); margin: 0; }
+    .catalog-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-catalog { background: var(--ws-gold); color: #fff; border: none; padding: 0.85rem 2rem; border-radius: 6px; font-weight: 700; font-size: 0.95rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; cursor: pointer; transition: all 0.2s; }
+    .btn-catalog:hover { background: #cf8e1a; color: #fff; }
+    .btn-catalog-ghost { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.5); padding: 0.85rem 2rem; border-radius: 6px; font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; cursor: pointer; transition: all 0.2s; }
+    .btn-catalog-ghost:hover { border-color: #fff; color: #fff; background: rgba(255,255,255,0.08); }
+
     /* ── History ── */
     #history { background: #fff; }
     .timeline { position: relative; padding-left: 2rem; }
@@ -269,6 +288,7 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#about"><span data-zh>公司簡介</span><span data-en>Overview</span></a></li>
+            <li><a class="dropdown-item" href="#team"><span data-zh>領導團隊</span><span data-en>Leadership</span></a></li>
             <li><a class="dropdown-item" href="#history"><span data-zh>維新歷史</span><span data-en>History</span></a></li>
           </ul>
         </li>
@@ -286,6 +306,7 @@
         </li>
         <li class="nav-item"><a class="nav-link" href="#products"><span data-zh>產品應用</span><span data-en>Products</span></a></li>
         <li class="nav-item"><a class="nav-link" href="#certs"><span data-zh>認證</span><span data-en>Certs</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#catalog"><span data-zh>型錄下載</span><span data-en>Catalog</span></a></li>
         <li class="nav-item"><a class="nav-link" href="#contact"><span data-zh>聯絡我們</span><span data-en>Contact</span></a></li>
       </ul>
     </div>
@@ -401,6 +422,84 @@
   </div>
 </section>
 
+
+<!-- ════════════════════════════════
+  TEAM
+════════════════════════════════ -->
+<section id="team">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="sec-label" data-zh>領導團隊</div>
+      <div class="sec-label" data-en>LEADERSHIP</div>
+      <h2 class="sec-title">
+        <span data-zh>傳承與創新的領導核心</span>
+        <span data-en>Leadership Built on Legacy & Innovation</span>
+      </h2>
+      <div class="sec-bar mx-auto"></div>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-4">
+        <div class="team-card">
+          <img src="images/h002.jpg" alt="創辦人 吳真" class="team-photo">
+          <div class="team-name" data-zh>吳 真</div>
+          <div class="team-name" data-en>Wu Chen</div>
+          <div class="team-title" data-zh>創辦人</div>
+          <div class="team-title" data-en>Founder</div>
+          <p class="team-bio" data-zh>1972年以匠人之心在彰化花壇創立維新鋁業，投入新台幣1,500萬元，以35位員工起步，開創台灣民營鋁擠型工廠的先驅。秉持「維新品質、永續經營」的理念，奠定半世紀的技術根基。</p>
+          <p class="team-bio" data-en>Founded WEISHIN in 1972 in Changhua with NT$15M and 35 employees, pioneering Taiwan's private aluminum extrusion industry. His philosophy of "WEISHIN Quality, Sustainable Management" laid the foundation for over 50 years of technical excellence.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="team-card">
+          <img src="images/h001.jpg" alt="總裁 吳國基" class="team-photo">
+          <div class="team-name" data-zh>吳國基</div>
+          <div class="team-name" data-en>Wu Kuo-chi</div>
+          <div class="team-title" data-zh>總裁</div>
+          <div class="team-title" data-en>President</div>
+          <p class="team-bio" data-zh>承繼創辦人精神，帶領維新鋁業從台灣走向國際，全面導入ISO 9001:2015品質管理系統與ERP數位化管理，擴大航太與軍工高合金鋁擠型事業，年產能提升至21,000噸。</p>
+          <p class="team-bio" data-en>Carrying forward the founder's vision, led WEISHIN to international markets with full ISO 9001:2015 and ERP digitalization, expanding aerospace and military-grade high-alloy extrusion capabilities to 21,000-ton annual capacity.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="team-card">
+          <img src="images/hh01.jpg" alt="維新技術團隊" class="team-photo">
+          <div class="team-name" data-zh>技術團隊</div>
+          <div class="team-name" data-en>Technical Team</div>
+          <div class="team-title" data-zh>專業工程師群</div>
+          <div class="team-title" data-en>Engineering Professionals</div>
+          <p class="team-bio" data-zh>由多位資深工程師組成的核心技術團隊，涵蓋模具設計、擠型製程、高合金冶金及品質管控各專業領域，累積逾50年實戰經驗，持續推動製程精進與客製化解決方案。</p>
+          <p class="team-bio" data-en>Our core technical team of senior engineers covers die design, extrusion process, high-alloy metallurgy, and quality control — with 50+ years of combined expertise driving continuous process innovation and custom solutions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════
+  CATALOG
+════════════════════════════════ -->
+<section id="catalog" style="padding: 4rem 0;">
+  <div class="container">
+    <div class="catalog-inner">
+      <div class="catalog-text">
+        <h2 data-zh><i class="bi bi-file-earmark-pdf-fill" style="color:var(--ws-gold)"></i> 產品型錄下載</h2>
+        <h2 data-en><i class="bi bi-file-earmark-pdf-fill" style="color:var(--ws-gold)"></i> Product Catalog</h2>
+        <p data-zh>索取維新鋁業完整產品型錄，了解全系列鋁擠型規格、材質與應用解決方案。</p>
+        <p data-en>Request WEISHIN's complete product catalog — full range of aluminum extrusion specs, alloys, and application solutions.</p>
+      </div>
+      <div class="catalog-actions">
+        <button class="btn-catalog" onclick="requestCatalog()">
+          <i class="bi bi-download"></i>
+          <span data-zh>索取型錄</span><span data-en>Request Catalog</span>
+        </button>
+        <a href="#contact" class="btn-catalog-ghost">
+          <i class="bi bi-envelope"></i>
+          <span data-zh>直接聯繫</span><span data-en>Contact Us</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ════════════════════════════════
   HISTORY
@@ -1157,6 +1256,20 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
+  // ── Catalog request: scroll to contact and pre-select inquiry type ──
+  function requestCatalog() {
+    const sel = document.querySelector('select[name="inquiry_type"]');
+    if (sel) {
+      for (let i = 0; i < sel.options.length; i++) {
+        if (sel.options[i].value.includes('型錄') || sel.options[i].value.toLowerCase().includes('catalog')) {
+          sel.selectedIndex = i;
+          break;
+        }
+      }
+    }
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+  }
+
   // ── Language toggle ──
   function toggleLang() {
     const html = document.getElementById('htmlRoot');
