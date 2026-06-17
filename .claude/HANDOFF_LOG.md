@@ -221,7 +221,7 @@ git log --oneline --decorate -5
 - 本機檢查所有新增部門圖片皆可載入。
 - `#departments` 下共有 5 個 `.dept-section`。
 - 品保區共有 5 個 `.quality-item`。
-- 目前尚未 commit / push。
+- 已 commit / push：`99d0611 將導覽選單改為右側浮層`。
 
 ### 6. 首頁 Hero 桌機與手機版版面平衡
 
@@ -243,7 +243,7 @@ git log --oneline --decorate -5
   - hero 文字 x=12px。
   - `scrollWidth` 等於 viewport width。
   - 無橫向 overflow。
-- 目前尚未 commit / push。
+- 已 commit / push：`202fe72 重建部門介紹並調整導覽體驗`。
 
 ### 7. 語言切換移到導覽列外層
 
@@ -272,7 +272,7 @@ git log --oneline --decorate -5
   - `html.lang` 會切成 `en`。
   - `body` class 會切成 `lang-en`。
   - 按鈕文字會從 `ENG` 變成 `中文`。
-- 目前尚未 commit / push。
+- 已 commit / push：`202fe72 重建部門介紹並調整導覽體驗`。
 
 ### 8. 手機 / 漢堡選單改為右側浮層
 
