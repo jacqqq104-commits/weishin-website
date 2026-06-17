@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" id="htmlRoot">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>維新鋁業 | 台灣高精密鋁擠型製造商 | WEISHIN Industry Co., Ltd.</title>
+  <meta name="description" content="維新鋁業成立於1972年，專業製造高精密鋁擠型材，通過ISO 9001:2015認證，年產能逾21,000噸。電話：06-2662311｜台南市仁德區">
+  <meta name="keywords" content="鋁擠型,鋁型材,aluminum extrusion,台灣鋁業,維新鋁業,Wei Shin,WEISHIN">
+  <meta property="og:title" content="維新鋁業 | WEISHIN Industry">
+  <meta property="og:description" content="成立逾50年，ISO 9001認證，年產能21,000噸，專業高精密鋁擠型製造。">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_TW">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --ws-navy:   #1a3a5c;
+      --ws-blue:   #2d6a9f;
+      --ws-gold:   #e8a020;
+      --ws-light:  #f4f6f9;
+      --ws-text:   #2c3e50;
+      --ws-muted:  #6b7f94;
+    }
+    * { box-sizing: border-box; }
+    body { font-family: 'Noto Sans TC', 'Inter', sans-serif; color: var(--ws-text); scroll-behavior: smooth; }
+    body.lang-en { font-family: 'Inter', 'Noto Sans TC', sans-serif; }
+
+    /* Language toggle */
+    [data-zh], [data-en] { }
+    body.lang-en [data-zh] { display: none !important; }
+    body.lang-zh [data-en] { display: none !important; }
+
+    /* ── Navbar ── */
+    .navbar { background: var(--ws-navy); padding: 0.7rem 0; position: fixed; top: 0; width: 100%; z-index: 1000; transition: box-shadow 0.3s; }
+    .navbar.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.3); }
+    .navbar-brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
+    .navbar-brand img { height: 38px; }
+    .brand-name { color: #fff; font-size: 1.15rem; font-weight: 700; letter-spacing: 0.03em; }
+    .brand-sub { color: rgba(255,255,255,0.45); font-size: 0.6rem; font-weight: 400; border-left: 1px solid rgba(255,255,255,0.25); padding-left: 0.55rem; line-height: 1.3; }
+    .nav-link { color: rgba(255,255,255,0.82) !important; font-weight: 500; font-size: 0.88rem; padding: 0.45rem 0.85rem !important; border-radius: 4px; transition: all 0.2s; }
+    .nav-link:hover, .nav-link.active { color: #fff !important; background: rgba(255,255,255,0.13); }
+    .dropdown-menu { background: #142d47; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 0.4rem; min-width: 160px; }
+    .dropdown-item { color: rgba(255,255,255,0.75); font-size: 0.85rem; border-radius: 4px; padding: 0.45rem 0.9rem; transition: all 0.2s; }
+    .dropdown-item:hover { background: rgba(255,255,255,0.1); color: #fff; }
+    .navbar-toggler { border-color: rgba(255,255,255,0.35); }
+    .navbar-toggler-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,0.8%29' stroke-linecap='round' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+    .lang-toggle { background: transparent; border: 1px solid rgba(255,255,255,0.35); color: rgba(255,255,255,0.75); font-size: 0.78rem; font-weight: 600; padding: 0.28rem 0.7rem; border-radius: 3px; cursor: pointer; transition: all 0.2s; letter-spacing: 0.05em; }
+    .lang-toggle:hover { background: rgba(255,255,255,0.12); color: #fff; }
+
+    /* ── Hero ── */
+    #hero { background: linear-gradient(135deg, #0d2035 0%, var(--ws-navy) 50%, #1f4d7a 100%); min-height: 92vh; display: flex; align-items: center; padding-top: 72px; position: relative; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; background: url('images/home-01.jpg') center/cover no-repeat; opacity: 0.15; }
+    .hero-pattern { position: absolute; inset: 0; background-image: radial-gradient(circle at 70% 50%, rgba(45,106,159,0.3) 0%, transparent 60%); }
+    .hero-content { position: relative; z-index: 1; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(232,160,32,0.15); border: 1px solid rgba(232,160,32,0.4); color: var(--ws-gold); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; padding: 0.35rem 1rem; border-radius: 2px; margin-bottom: 1.5rem; }
+    .hero-title { font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 700; color: #fff; line-height: 1.15; margin-bottom: 1.25rem; }
+    .hero-title em { color: var(--ws-gold); font-style: normal; }
+    .hero-sub { font-size: 1.05rem; color: rgba(255,255,255,0.75); max-width: 540px; line-height: 1.85; margin-bottom: 2.5rem; }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .btn-gold { background: var(--ws-gold); border: none; color: #fff; padding: 0.9rem 2rem; border-radius: 4px; font-weight: 700; font-size: 0.95rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; transition: all 0.2s; }
+    .btn-gold:hover { background: #cf8a18; color: #fff; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(232,160,32,0.35); }
+    .btn-ghost { background: transparent; border: 2px solid rgba(255,255,255,0.5); color: #fff; padding: 0.9rem 2rem; border-radius: 4px; font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; transition: all 0.2s; }
+    .btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,0.08); color: #fff; }
+    .hero-stats { display: flex; gap: 3rem; flex-wrap: wrap; margin-top: 3.5rem; padding-top: 2.5rem; border-top: 1px solid rgba(255,255,255,0.1); }
+    .stat { text-align: left; }
+    .stat-n { font-size: 2.4rem; font-weight: 700; color: var(--ws-gold); line-height: 1; }
+    .stat-l { font-size: 0.75rem; color: rgba(255,255,255,0.55); margin-top: 0.25rem; letter-spacing: 0.03em; }
+
+    /* ── Sections ── */
+    section { padding: 88px 0; }
+    .sec-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.2em; color: var(--ws-gold); text-transform: uppercase; margin-bottom: 0.5rem; }
+    .sec-title { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: var(--ws-navy); margin-bottom: 0.75rem; line-height: 1.25; }
+    .sec-bar { width: 44px; height: 3px; background: var(--ws-gold); border-radius: 2px; margin-bottom: 1.5rem; }
+    .sec-bar.mx-auto { margin-left: auto; margin-right: auto; }
+
+    /* ── About ── */
+    #about { background: var(--ws-light); }
+    .about-img-wrap { position: relative; border-radius: 10px; overflow: hidden; }
+    .about-img-wrap img { width: 100%; height: 400px; object-fit: cover; display: block; }
+    .about-badge { position: absolute; bottom: 20px; left: 20px; background: var(--ws-navy); color: #fff; padding: 0.9rem 1.25rem; border-radius: 6px; }
+    .about-badge strong { display: block; font-size: 1.8rem; font-weight: 700; color: var(--ws-gold); line-height: 1; }
+    .about-badge span { font-size: 0.78rem; color: rgba(255,255,255,0.7); }
+    .check-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    .check-list li { display: flex; align-items: center; gap: 0.6rem; font-size: 0.88rem; font-weight: 600; }
+    .check-list li i { color: var(--ws-gold); font-size: 1rem; flex-shrink: 0; }
+
+    /* ── History ── */
+    #history { background: #fff; }
+    .timeline { position: relative; padding-left: 2rem; }
+    .timeline::before { content: ''; position: absolute; left: 0; top: 8px; bottom: 8px; width: 2px; background: linear-gradient(to bottom, var(--ws-gold), var(--ws-blue)); border-radius: 2px; }
+    .tl-group { margin-bottom: 3rem; }
+    .tl-era { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; color: var(--ws-gold); text-transform: uppercase; margin-bottom: 1rem; }
+    .tl-item { position: relative; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+    .tl-item::before { content: ''; position: absolute; left: -2.35rem; top: 0.45rem; width: 10px; height: 10px; background: var(--ws-navy); border: 2px solid var(--ws-gold); border-radius: 50%; }
+    .tl-year { font-size: 1rem; font-weight: 700; color: var(--ws-navy); margin-bottom: 0.2rem; }
+    .tl-text { font-size: 0.88rem; color: var(--ws-muted); line-height: 1.7; }
+    .tl-img-row { display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap; }
+    .tl-img-row img { height: 140px; border-radius: 6px; object-fit: cover; flex: 1; min-width: 140px; }
+
+    /* ── Features ── */
+    #features { background: var(--ws-navy); }
+    #features .sec-title { color: #fff; }
+    .feat-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 2rem 1.5rem; height: 100%; transition: all 0.25s; }
+    .feat-card:hover { background: rgba(255,255,255,0.12); transform: translateY(-4px); }
+    .feat-icon { width: 50px; height: 50px; background: var(--ws-gold); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: #fff; margin-bottom: 1.25rem; }
+    .feat-card h5 { color: #fff; font-weight: 700; margin-bottom: 0.5rem; font-size: 1rem; }
+    .feat-card p { color: rgba(255,255,255,0.6); font-size: 0.87rem; line-height: 1.75; margin: 0; }
+
+    /* ── Departments ── */
+    #departments { background: var(--ws-light); }
+    .dept-card { background: #fff; border-radius: 8px; padding: 1.75rem; height: 100%; border-left: 3px solid var(--ws-gold); box-shadow: 0 2px 12px rgba(26,58,92,0.07); transition: all 0.25s; }
+    .dept-card:hover { box-shadow: 0 8px 28px rgba(26,58,92,0.13); transform: translateY(-3px); }
+    .dept-num { font-size: 2rem; font-weight: 700; color: var(--ws-gold); line-height: 1; margin-bottom: 0.75rem; }
+    .dept-card h5 { font-weight: 700; color: var(--ws-navy); margin-bottom: 0.5rem; font-size: 1rem; }
+    .dept-card p { font-size: 0.87rem; color: var(--ws-muted); line-height: 1.75; margin: 0; }
+
+    /* ── Products ── */
+    #products { background: #fff; }
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; }
+    .prod-card { border-radius: 8px; overflow: hidden; box-shadow: 0 2px 16px rgba(26,58,92,0.08); transition: all 0.25s; background: #fff; }
+    .prod-card:hover { box-shadow: 0 8px 32px rgba(26,58,92,0.15); transform: translateY(-4px); }
+    .prod-img { height: 210px; overflow: hidden; }
+    .prod-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+    .prod-card:hover .prod-img img { transform: scale(1.05); }
+    .prod-img-placeholder { width: 100%; height: 100%; background: linear-gradient(135deg, var(--ws-navy), var(--ws-blue)); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.25); font-size: 2.5rem; }
+    .prod-body { padding: 1.25rem 1.25rem 1.5rem; }
+    .prod-body h5 { font-weight: 700; color: var(--ws-navy); font-size: 0.95rem; margin-bottom: 0.4rem; }
+    .prod-body p { font-size: 0.84rem; color: var(--ws-muted); line-height: 1.7; margin: 0; }
+    .prod-tag { display: inline-block; background: rgba(26,58,92,0.07); color: var(--ws-navy); font-size: 0.72rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 3px; margin-top: 0.75rem; }
+
+    /* ── Certs ── */
+    #certs { background: var(--ws-light); }
+    .cert-card { text-align: center; background: #fff; padding: 2rem 1.5rem; border-radius: 8px; box-shadow: 0 2px 12px rgba(26,58,92,0.06); transition: all 0.25s; height: 100%; }
+    .cert-card:hover { box-shadow: 0 6px 24px rgba(26,58,92,0.12); transform: translateY(-3px); }
+    .cert-card img { height: 80px; object-fit: contain; margin-bottom: 1rem; }
+    .cert-card .cert-icon { font-size: 2.8rem; color: var(--ws-gold); margin-bottom: 1rem; }
+    .cert-card h6 { font-weight: 700; color: var(--ws-navy); font-size: 0.92rem; margin-bottom: 0.25rem; }
+    .cert-card p { font-size: 0.8rem; color: var(--ws-muted); margin: 0; }
+
+    /* ── Contact ── */
+    #contact { background: #fff; }
+    .contact-card { background: var(--ws-light); border-radius: 10px; padding: 2.5rem; height: 100%; }
+    .ci-row { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; }
+    .ci-icon { width: 42px; height: 42px; min-width: 42px; background: var(--ws-navy); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1rem; }
+    .ci-row h6 { font-weight: 700; color: var(--ws-navy); margin-bottom: 0.15rem; font-size: 0.88rem; }
+    .ci-row p { font-size: 0.87rem; color: var(--ws-muted); margin: 0; }
+    .ci-row a { color: var(--ws-navy); text-decoration: none; }
+    .ci-row a:hover { color: var(--ws-gold); }
+    .map-wrap { border-radius: 8px; overflow: hidden; height: 280px; margin-top: 1.5rem; }
+    .map-wrap iframe { width: 100%; height: 100%; border: 0; }
+    .form-card { background: var(--ws-navy); border-radius: 10px; padding: 2.5rem; }
+    .form-card h5 { color: #fff; font-weight: 700; margin-bottom: 1.75rem; }
+    .form-card .form-label { color: rgba(255,255,255,0.8); font-size: 0.83rem; font-weight: 600; }
+    .form-card .form-control, .form-card .form-select { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); color: #fff; border-radius: 5px; font-size: 0.88rem; }
+    .form-card .form-control::placeholder { color: rgba(255,255,255,0.35); }
+    .form-card .form-control:focus, .form-card .form-select:focus { background: rgba(255,255,255,0.12); border-color: var(--ws-gold); box-shadow: 0 0 0 3px rgba(232,160,32,0.2); color: #fff; }
+    .form-card .form-select option { background: var(--ws-navy); color: #fff; }
+    .btn-submit { background: var(--ws-gold); border: none; color: #fff; padding: 0.85rem 2rem; border-radius: 5px; font-weight: 700; font-size: 0.92rem; width: 100%; transition: all 0.2s; }
+    .btn-submit:hover { background: #cf8a18; }
+
+    /* ── Footer ── */
+    footer { background: #0a1a2c; color: rgba(255,255,255,0.6); padding: 3.5rem 0 0; }
+    .footer-brand { color: #fff; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; }
+    footer p { font-size: 0.83rem; line-height: 1.85; }
+    footer h6 { color: rgba(255,255,255,0.9); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem; }
+    .fl { display: block; color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.83rem; margin-bottom: 0.4rem; transition: color 0.2s; }
+    .fl:hover { color: var(--ws-gold); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.07); margin-top: 2.5rem; padding: 1.25rem 0; font-size: 0.78rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+    .social-btn { width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,0.07); display: inline-flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.9rem; transition: all 0.2s; }
+    .social-btn:hover { background: var(--ws-gold); color: #fff; }
+
+    /* ── Back to top ── */
+    #btt { position: fixed; bottom: 1.75rem; right: 1.75rem; width: 42px; height: 42px; background: var(--ws-navy); color: #fff; border: none; border-radius: 50%; font-size: 1rem; display: flex; align-items: center; justify-content: center; opacity: 0; transform: translateY(12px); transition: all 0.3s; cursor: pointer; z-index: 900; box-shadow: 0 4px 16px rgba(0,0,0,0.22); }
+    #btt.show { opacity: 1; transform: translateY(0); }
+    #btt:hover { background: var(--ws-gold); }
+
+    /* ── Animations (CSS-only, no JS dependency) ── */
+    .reveal { opacity: 1; }
+
+    /* ── Misc ── */
+    @media (max-width: 768px) {
+      section { padding: 60px 0; }
+      .hero-stats { gap: 1.75rem; }
+      .stat-n { font-size: 2rem; }
+      .check-list { grid-template-columns: 1fr; }
+      .form-card, .contact-card { padding: 1.5rem; }
+      .tl-img-row img { height: 100px; }
+    }
+    @media (max-width: 576px) {
+      .product-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body class="lang-zh">
+
+<!-- ════════════════════════════════
+  NAVBAR
+════════════════════════════════ -->
+<nav class="navbar" id="nav">
+  <div class="container">
+    <a class="navbar-brand" href="#hero">
+      <img src="images/logo-s.png" alt="維新鋁業" onerror="this.style.display='none'">
+      <div>
+        <div class="brand-name" data-zh>維新鋁業</div>
+        <div class="brand-name" data-en>WEISHIN Industry</div>
+        <div class="brand-sub" data-zh>WEISHIN INDUSTRY CO., LTD.</div>
+        <div class="brand-sub" data-en>維新鋁業股份有限公司</div>
+      </div>
+    </a>
+
+    <button class="navbar-toggler ms-auto me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="選單">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+            <span data-zh>關於維新</span><span data-en>About</span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#about"><span data-zh>公司簡介</span><span data-en>Overview</span></a></li>
+            <li><a class="dropdown-item" href="#history"><span data-zh>維新歷史</span><span data-en>History</span></a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#departments"><span data-zh>部門介紹</span><span data-en>Departments</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#products"><span data-zh>產品應用</span><span data-en>Products</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#certs"><span data-zh>認證</span><span data-en>Certs</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact"><span data-zh>聯絡我們</span><span data-en>Contact</span></a></li>
+        <li class="nav-item ms-lg-2">
+          <button class="lang-toggle" id="langBtn" onclick="toggleLang()">ENG</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ════════════════════════════════
+  HERO
+════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 hero-content">
+        <div class="hero-badge">
+          <i class="bi bi-award-fill"></i>
+          <span data-zh>成立於 1972 年 · ISO 9001:2015 認證</span>
+          <span data-en>Est. 1972 · ISO 9001:2015 Certified</span>
+        </div>
+        <h1 class="hero-title">
+          <span data-zh>台灣頂尖<br><em>鋁擠型製造商</em></span>
+          <span data-en>Taiwan's Premier<br><em>Aluminum Extrusion</em> Manufacturer</span>
+        </h1>
+        <p class="hero-sub">
+          <span data-zh>維新鋁業累積逾50年技術傳承，以職人精神精進製造工藝，服務航太、建築、電子、交通等多元產業，提供客製化鋁型材全流程解決方案。</span>
+          <span data-en>With over 50 years of technical heritage, WEISHIN Industry delivers precision aluminum extrusion solutions for aerospace, construction, electronics, and transportation sectors worldwide.</span>
+        </p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn-gold">
+            <i class="bi bi-envelope-fill"></i>
+            <span data-zh>立即詢價</span><span data-en>Get a Quote</span>
+          </a>
+          <a href="#about" class="btn-ghost">
+            <i class="bi bi-play-circle"></i>
+            <span data-zh>了解更多</span><span data-en>Learn More</span>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-n">1972</div>
+            <div class="stat-l" data-zh>年創立</div>
+            <div class="stat-l" data-en>Year Founded</div>
+          </div>
+          <div class="stat">
+            <div class="stat-n">21,000<span style="font-size:1.1rem">+</span></div>
+            <div class="stat-l" data-zh>年產能（噸）</div>
+            <div class="stat-l" data-en>Annual Capacity (tons)</div>
+          </div>
+          <div class="stat">
+            <div class="stat-n">ISO</div>
+            <div class="stat-l" data-zh>9001:2015 認證</div>
+            <div class="stat-l" data-en>9001:2015 Certified</div>
+          </div>
+          <div class="stat">
+            <div class="stat-n">5</div>
+            <div class="stat-l" data-zh>大生產部門</div>
+            <div class="stat-l" data-en>Production Divisions</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════
+  ABOUT
+════════════════════════════════ -->
+<section id="about">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5 reveal">
+        <div class="about-img-wrap">
+          <img src="images/abouthearo.jpg" alt="維新鋁業廠房" loading="lazy" onerror="this.src='images/home-01.jpg'">
+          <div class="about-badge">
+            <strong>50+</strong>
+            <span data-zh>年製造經驗</span>
+            <span data-en>Years of Experience</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7 reveal">
+        <div class="sec-label" data-zh>關於維新</div>
+        <div class="sec-label" data-en>ABOUT WEISHIN</div>
+        <h2 class="sec-title">
+          <span data-zh>維新鋁業股份有限公司</span>
+          <span data-en>WEISHIN Industry Co., Ltd.</span>
+        </h2>
+        <div class="sec-bar"></div>
+        <p style="color:var(--ws-muted);line-height:1.9;margin-bottom:1.25rem" data-zh>
+          維新鋁業股份有限公司創立於1972年，是台灣最早期的民營鋁擠型工廠之一，位於717台南市仁德區二行里二仁路一段491巷31號。
+          半個世紀以來，公司秉持「維新品質、永續經營」的理念，以職人精神持續精進製造技術，創造時代尖端製品。
+        </p>
+        <p style="color:var(--ws-muted);line-height:1.9;margin-bottom:1.25rem" data-en>
+          WEISHIN Industry Co., Ltd. was founded in 1972 as one of Taiwan's earliest private aluminum extrusion manufacturers. Located in Rende District, Tainan, the company has upheld its philosophy of "WEISHIN Quality, Sustainable Management" for over 50 years, continuously refining manufacturing technology with craftsmanship spirit.
+        </p>
+        <p style="color:var(--ws-muted);line-height:1.9;margin-bottom:2rem" data-zh>
+          公司導入ISO 9001:2015品質管理系統，從原料選材、模具開發、擠型生產到出貨檢驗全程數位化管理，並在專業人才培訓與高精密儀器設備更新上持續投入，穩健的製程能力走在同業先端。
+        </p>
+        <p style="color:var(--ws-muted);line-height:1.9;margin-bottom:2rem" data-en>
+          The company has implemented ISO 9001:2015 quality management with full digitalization from raw material sourcing, mold development, extrusion production to shipment inspection. Continuous investment in professional talent training and high-precision equipment keeps WEISHIN at the forefront of the industry.
+        </p>
+        <ul class="check-list">
+          <li><i class="bi bi-check-circle-fill"></i><span data-zh>全球最早期Wagstaff鑄造系統</span><span data-en>World-class Wagstaff Casting System</span></li>
+          <li><i class="bi bi-check-circle-fill"></i><span data-zh>客製化模具快速開發</span><span data-en>Rapid Custom Mold Development</span></li>
+          <li><i class="bi bi-check-circle-fill"></i><span data-zh>全製程ERP數位管理</span><span data-en>Full-process ERP Digital Management</span></li>
+          <li><i class="bi bi-check-circle-fill"></i><span data-zh>航太與軍工認證供應商</span><span data-en>Aerospace & Defense Qualified Supplier</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════
+  HISTORY
+════════════════════════════════ -->
+<section id="history">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <div class="sec-label" data-zh>維新歷史</div>
+      <div class="sec-label" data-en>OUR HISTORY</div>
+      <h2 class="sec-title">
+        <span data-zh>半世紀的技術傳承</span>
+        <span data-en>50 Years of Technical Heritage</span>
+      </h2>
+      <div class="sec-bar mx-auto"></div>
+    </div>
+    <div class="row g-5">
+      <div class="col-lg-6 reveal">
+        <div class="timeline">
+          <!-- Era 1 -->
+          <div class="tl-group">
+            <div class="tl-era" data-zh>第一章 — 維新的原點 1972–1981</div>
+            <div class="tl-era" data-en>Chapter 1 — The Origin 1972–1981</div>
+            <div class="tl-item">
+              <div class="tl-year">1972</div>
+              <div class="tl-text" data-zh>創辦人吳真投資新台幣1,500萬元，在彰化花壇創立維新鋁業，為台灣最早期民營鋁擠型工廠之一。初期員工35人，年產能2,500噸。</div>
+              <div class="tl-text" data-en>Founder Wu Chen invested NT$15M to establish WEISHIN in Changhua. One of Taiwan's earliest private aluminum extrusion factories. 35 employees, 2,500-ton annual capacity.</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-year">1973</div>
+              <div class="tl-text" data-zh>遷廠至台南現址。投資額增至4,500萬元，廠區面積5,000坪，員工達100人，年產能3,000噸。</div>
+              <div class="tl-text" data-en>Relocated to current Tainan facility. Investment increased to NT$45M. Factory area: 5,000 ping. Employees: 100. Annual capacity: 3,000 tons.</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-year">1979</div>
+              <div class="tl-text" data-zh>增設1,700噸擠型機，引進日本安川電機擠型引出機，正式進入自動化生產時代。</div>
+              <div class="tl-text" data-en>Added 1,700-ton extrusion press. Introduced Japan Yaskawa Electric puller — formal entry into automation era.</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-year">1980</div>
+              <div class="tl-text" data-zh>進入軍品市場，通過國防部聯勤評鑑，取得「國防工業合格衛星工廠」認證。</div>
+              <div class="tl-text" data-en>Entered military products market. Passed Ministry of Defense evaluation. Obtained "Defense Product Industry Qualified Satellite Factory" certification.</div>
+            </div>
+            <div class="tl-img-row">
+              <img src="images/h001.jpg" alt="1972年草創時期" loading="lazy" onerror="this.style.display='none'">
+              <img src="images/h002.jpg" alt="創辦人吳真與總裁吳國基" loading="lazy" onerror="this.style.display='none'">
+            </div>
+          </div>
+
+          <!-- Era 2 -->
+          <div class="tl-group">
+            <div class="tl-era" data-zh>第二章 — 維新起飛 1982–1996</div>
+            <div class="tl-era" data-en>Chapter 2 — Taking Off 1982–1996</div>
+            <div class="tl-item">
+              <div class="tl-year">1982</div>
+              <div class="tl-text" data-zh>購置廠東側土地，建設辦公大樓與廠房。新增1,700噸及1,000噸擠型機各兩套，年產能提升至12,000噸。</div>
+              <div class="tl-text" data-en>Built new office building and factories. Added 1,700-ton and 1,000-ton extrusion machines. Annual capacity increased to 12,000 tons.</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-year">1987</div>
+              <div class="tl-text" data-zh>引進亞洲第一套Wagstaff Airslip鋁合金鑄造系統，品質與鑄造技術達到世界一流水準。</div>
+              <div class="tl-text" data-en>Introduced Asia's first Wagstaff Airslip aluminum alloy casting system. Quality and casting technology aligned with world-class manufacturers.</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-year">1991</div>
+              <div class="tl-text" data-zh>取得經濟部中央標準局甲等品質管理認證，榮獲五項CNS優良標誌。</div>
+              <div class="tl-text" data-en>Obtained Grade A quality management certification. Received five CNS marks of excellence from the Ministry of Economic Affairs.</div>
+            </div>
+            <div class="tl-img-row">
+              <img src="images/h003.jpg" alt="1982年新廠房落成" loading="lazy" onerror="this.style.display='none'">
+              <img src="images/frame01.jpg" alt="廠房設備" loading="lazy" onerror="this.style.display='none'">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 reveal">
+        <div class="timeline">
+          <!-- Era 3 -->
+          <div class="tl-group">
+            <div class="tl-era" data-zh>第三章 — ISO認證時代 1997–2007</div>
+            <div class="tl-era" data-en>Chapter 3 — ISO Certification Era 1997–2007</div>
+            <div class="tl-item">
+              <div class="tl-year">1997</div>
+              <div class="tl-text" data-zh>通過美國UL-9002及中華民國CNS-9002認證。新增2,500噸擠型生產線，年產能突破15,000噸。</div>
+              <div class="tl-text" data-en>Passed US UL-9002 and ROC CNS-9002 certification. Added 2,500-ton extrusion line. Annual capacity exceeded 15,000 tons.</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-year">2000</div>
+              <div class="tl-text" data-zh>模具課引進線切割機、數位放電加工機、CNC綜合加工機及三次元量測儀與CAD/CAM系統，正式進入數位化時代。</div>
+              <div class="tl-text" data-en>Die shop introduced wire cutting, CNC machining, 3D measurement instruments and CAD/CAM systems — entering the digital era.</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-year">2002</div>
+              <div class="tl-text" data-zh>ISO-9002升版為ISO-9001品質管理系統，全面導入ERP系統，所有製程全面數位化。</div>
+              <div class="tl-text" data-en>Converted ISO-9002 to ISO-9001. Implemented company-wide ERP system — all processes fully digitized.</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-year">2006</div>
+              <div class="tl-text" data-zh>新增間接擠型機生產線，供應航太及軍工高科技廠商高合金鋁擠型材。</div>
+              <div class="tl-text" data-en>Added indirect extrusion line. Supplies aerospace and military high-tech manufacturers with high-alloy aluminum extrusion materials.</div>
+            </div>
+          </div>
+
+          <!-- Era 4 -->
+          <div class="tl-group">
+            <div class="tl-era" data-zh>第四章 — 全程數位化生產 2008–今</div>
+            <div class="tl-era" data-en>Chapter 4 — Full Digitalization 2008–Present</div>
+            <div class="tl-item">
+              <div class="tl-year">2008</div>
+              <div class="tl-text" data-zh>再增第二條2,500噸擠型生產線，年產能達18,000噸。</div>
+              <div class="tl-text" data-en>Added second 2,500-ton extrusion line. Annual capacity reached 18,000 tons.</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-year">2014</div>
+              <div class="tl-text" data-zh>更換老舊1,100噸及1,800噸設備，年產能提升至21,000噸。</div>
+              <div class="tl-text" data-en>Replaced aging equipment. Annual production capacity increased to 21,000 tons.</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-year">2019</div>
+              <div class="tl-text" data-zh>新增1,800噸一體化間接擠型機，供應工業高合金材料，擴大產能滿足客戶需求。</div>
+              <div class="tl-text" data-en>Added integrated 1,800-ton indirect extrusion machine for industrial high-alloy materials.</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-year">2020</div>
+              <div class="tl-text" data-zh>更新製程設備，推進先進數位自動化流程，提升效率與品質，達成公司品質政策目標。</div>
+              <div class="tl-text" data-en>Advanced digital automated processes implemented. Maximized quality and capacity. Achieved company quality policy goals.</div>
+            </div>
+            <div class="tl-img-row">
+              <img src="images/frame02.jpg" alt="數位化生產設備" loading="lazy" onerror="this.style.display='none'">
+              <img src="images/frame03.jpg" alt="擠型生產線" loading="lazy" onerror="this.style.display='none'">
+              <img src="images/frame04.jpg" alt="現代廠房" loading="lazy" onerror="this.style.display='none'">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════
+  WHY CHOOSE US
+════════════════════════════════ -->
+<section id="features">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <div class="sec-label" data-zh style="color:rgba(232,160,32,0.9)">為何選擇維新</div>
+      <div class="sec-label" data-en style="color:rgba(232,160,32,0.9)">WHY CHOOSE WEISHIN</div>
+      <h2 class="sec-title" style="color:#fff">
+        <span data-zh>超越既往，追求卓越</span>
+        <span data-en>Surpass the Past, Pursue Excellence</span>
+      </h2>
+      <div class="sec-bar mx-auto" style="background:rgba(232,160,32,0.5)"></div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3 reveal">
+        <div class="feat-card">
+          <div class="feat-icon"><i class="bi bi-award-fill"></i></div>
+          <h5 data-zh>50年技術傳承</h5>
+          <h5 data-en>50-Year Heritage</h5>
+          <p data-zh>深厚的產業積累，豐富的工程人員隊伍，台灣最早期民營鋁擠型廠之一。</p>
+          <p data-en>Deep industry roots as one of Taiwan's earliest private aluminum extrusion manufacturers.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 reveal">
+        <div class="feat-card">
+          <div class="feat-icon"><i class="bi bi-gear-wide-connected"></i></div>
+          <h5 data-zh>全製程客製化</h5>
+          <h5 data-en>Full-Process Customization</h5>
+          <p data-zh>從設計諮詢、模具開發到生產交付一站式服務，CAD/CAM數位設計，縮短開發周期。</p>
+          <p data-en>One-stop service from design consultation and mold development to production delivery with CAD/CAM digital design.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 reveal">
+        <div class="feat-card">
+          <div class="feat-icon"><i class="bi bi-patch-check-fill"></i></div>
+          <h5 data-zh>多項國際認證</h5>
+          <h5 data-en>Multiple Certifications</h5>
+          <p data-zh>ISO 9001:2015、美國UL認證，以及國防部合格衛星工廠認證，品質有保障。</p>
+          <p data-en>ISO 9001:2015, US UL certification, and Taiwan Ministry of Defense qualified supplier status.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 reveal">
+        <div class="feat-card">
+          <div class="feat-icon"><i class="bi bi-cpu-fill"></i></div>
+          <h5 data-zh>數位化生產管理</h5>
+          <h5 data-en>Digital Manufacturing</h5>
+          <p data-zh>全公司導入ERP系統，所有製程數位化，亞洲首套Wagstaff鑄造系統，業界領先。</p>
+          <p data-en>Company-wide ERP system. Asia's first Wagstaff casting system. Industry-leading digital manufacturing processes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════
+  DEPARTMENTS
+════════════════════════════════ -->
+<section id="departments">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <div class="sec-label" data-zh>部門介紹</div>
+      <div class="sec-label" data-en>OUR DEPARTMENTS</div>
+      <h2 class="sec-title">
+        <span data-zh>五大專業部門</span>
+        <span data-en>Five Professional Divisions</span>
+      </h2>
+      <div class="sec-bar mx-auto"></div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 reveal">
+        <div class="dept-card">
+          <div class="dept-num">01</div>
+          <h5 data-zh>物料管理課</h5>
+          <h5 data-en>Raw Material Management</h5>
+          <p data-zh>國內外鋁錠採購、原料倉儲管理，嚴格進料品質檢驗，提供安全可靠的高品質庫存，確保生產所需原料穩定供應。</p>
+          <p data-en>Domestic and international aluminum ingot procurement, raw material warehouse management, strict incoming quality inspection to ensure stable supply of high-quality materials.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal">
+        <div class="dept-card">
+          <div class="dept-num">02</div>
+          <h5 data-zh>模具課</h5>
+          <h5 data-en>Die Shop</h5>
+          <p data-zh>全數位化模具設計，配備線切割機、數位放電加工機、CNC加工機與三次元量測儀，快速開模打樣，提供專業客製化服務。</p>
+          <p data-en>Fully digital mold design with wire cutting, CNC machining, and 3D measurement instruments. Fast mold-making and sample service with professional customization.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal">
+        <div class="dept-card">
+          <div class="dept-num">03</div>
+          <h5 data-zh>擠型課</h5>
+          <h5 data-en>Extrusion Division</h5>
+          <p data-zh>專精高品質、高精密鋁擠型生產，配備頂尖擠型設備，先進數位化生產管理，持續優化鋁合金擠型製造製程。</p>
+          <p data-en>Specializes in high-quality, high-precision aluminum extrusion production with top-tier equipment and advanced digital production management.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal">
+        <div class="dept-card">
+          <div class="dept-num">04</div>
+          <h5 data-zh>高合金課</h5>
+          <h5 data-en>High Alloy Division</h5>
+          <p data-zh>累積50年專業經驗，先進設備投入，嚴格製程管控，確保材料潔淨度與品質穩定性，專供航太及軍工高規格需求。</p>
+          <p data-en>50 years of accumulated expertise with advanced equipment and strict process control. Ensures material cleanliness for aerospace and military high-spec requirements.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal">
+        <div class="dept-card">
+          <div class="dept-num">05</div>
+          <h5 data-zh>品保部</h5>
+          <h5 data-en>Quality Assurance</h5>
+          <p data-zh>進料、製程及成品三階段品質管制，原物料與製程條件改善，品質問題分析與改善追蹤，確保每批產品符合ISO標準。</p>
+          <p data-en>Three-stage quality control: incoming materials, in-process, and finished products. Quality issue analysis and improvement tracking per ISO standards.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal">
+        <div class="dept-card" style="border-left-color:var(--ws-blue);background:var(--ws-light)">
+          <div class="dept-num" style="color:var(--ws-blue)"><i class="bi bi-quote" style="font-size:2rem"></i></div>
+          <h5 data-zh>維新品質・永續經營</h5>
+          <h5 data-en>WEISHIN Quality · Sustainable Management</h5>
+          <p data-zh>超越既往、追求卓越、誠信踏實、服務熱忱 — 這是維新半世紀來始終堅守的核心價值。</p>
+          <p data-en>Surpass the past, pursue excellence, integrity and reliability, passionate service — the core values WEISHIN has upheld for half a century.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════
+  PRODUCTS / APPLICATIONS
+════════════════════════════════ -->
+<section id="products">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <div class="sec-label" data-zh>產品應用</div>
+      <div class="sec-label" data-en>PRODUCTS & APPLICATIONS</div>
+      <h2 class="sec-title">
+        <span data-zh>多元產業應用</span>
+        <span data-en>Diverse Industry Applications</span>
+      </h2>
+      <div class="sec-bar mx-auto"></div>
+      <p style="color:var(--ws-muted);max-width:580px;margin:0 auto;font-size:0.92rem;line-height:1.8" data-zh>
+        維新鋁擠型材廣泛應用於皮箱框、建材、淋浴門、鋁帷牆、散熱器、馬達外殼、汽機車零件、腳踏車、車削用鋁、戶外家具、運動器材等
+      </p>
+      <p style="color:var(--ws-muted);max-width:580px;margin:0 auto;font-size:0.92rem;line-height:1.8" data-en>
+        WEISHIN aluminum extrusions are widely used in luggage frames, construction materials, shower doors, curtain walls, heat sinks, motor housings, automotive parts, bicycles, outdoor furniture, sports equipment and more.
+      </p>
+    </div>
+    <div class="product-grid reveal">
+      <div class="prod-card">
+        <div class="prod-img">
+          <img src="images/app-01.jpg" alt="鋁合金馬達外殼" loading="lazy" onerror="this.parentElement.innerHTML='<div class=prod-img-placeholder><i class=bi bi-cpu-fill></i></div>'">
+        </div>
+        <div class="prod-body">
+          <h5 data-zh>鋁合金馬達外殼</h5><h5 data-en>Aluminum Alloy Motor Case</h5>
+          <p data-zh>高精密鋁擠型馬達外殼，優異散熱性能，廣泛應用於工業馬達及電動車驅動系統。</p>
+          <p data-en>High-precision aluminum motor housings with excellent heat dissipation for industrial motors and EV drive systems.</p>
+          <span class="prod-tag" data-zh>工業 / 電動車</span><span class="prod-tag" data-en>Industrial / EV</span>
+        </div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-img">
+          <img src="images/app-02.jpg" alt="腳踏車零件" loading="lazy" onerror="this.parentElement.innerHTML='<div class=prod-img-placeholder><i class=bi bi-bicycle></i></div>'">
+        </div>
+        <div class="prod-body">
+          <h5 data-zh>腳踏車零件</h5><h5 data-en>Bicycle Components</h5>
+          <p data-zh>輕量高強度鋁型材，應用於自行車車架、輪圈及各種結構件，兼具輕量與耐久性。</p>
+          <p data-en>Lightweight, high-strength aluminum profiles for bicycle frames, rims and structural parts combining lightness and durability.</p>
+          <span class="prod-tag" data-zh>運動 / 交通</span><span class="prod-tag" data-en>Sports / Transportation</span>
+        </div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-img">
+          <img src="images/app-03.jpg" alt="電腦散熱片" loading="lazy" onerror="this.parentElement.innerHTML='<div class=prod-img-placeholder><i class=bi bi-motherboard></i></div>'">
+        </div>
+        <div class="prod-body">
+          <h5 data-zh>電腦散熱片</h5><h5 data-en>Computer Heat Sink</h5>
+          <p data-zh>高導熱係數鋁擠型散熱片，應用於CPU散熱器、LED燈具及電源供應器等電子元件。</p>
+          <p data-en>High thermal conductivity aluminum heat sinks for CPUs, LED fixtures and power supply units.</p>
+          <span class="prod-tag" data-zh>電子 / 科技</span><span class="prod-tag" data-en>Electronics / Tech</span>
+        </div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-img">
+          <img src="images/app-04.jpg" alt="無塵室結構件" loading="lazy" onerror="this.parentElement.innerHTML='<div class=prod-img-placeholder><i class=bi bi-grid-3x3></i></div>'">
+        </div>
+        <div class="prod-body">
+          <h5 data-zh>無塵室用品</h5><h5 data-en>Cleanroom Components</h5>
+          <p data-zh>符合無塵室規範的鋁擠型結構件，表面處理精良，適用於半導體及精密製造環境。</p>
+          <p data-en>Cleanroom-compliant aluminum extrusion structural parts for semiconductor and precision manufacturing environments.</p>
+          <span class="prod-tag" data-zh>半導體 / 精密</span><span class="prod-tag" data-en>Semiconductor</span>
+        </div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-img">
+          <img src="images/app-05.jpg" alt="運動器材零件" loading="lazy" onerror="this.parentElement.innerHTML='<div class=prod-img-placeholder><i class=bi bi-trophy></i></div>'">
+        </div>
+        <div class="prod-body">
+          <h5 data-zh>運動器材</h5><h5 data-en>Fitness Equipment</h5>
+          <p data-zh>輕量化鋁擠型材，應用於跑步機、健身車等各類室內外運動器材的結構框架。</p>
+          <p data-en>Lightweight aluminum profiles for treadmills, stationary bikes and various indoor/outdoor fitness equipment frames.</p>
+          <span class="prod-tag" data-zh>運動 / 休閒</span><span class="prod-tag" data-en>Sports / Leisure</span>
+        </div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-img">
+          <img src="images/app-06.jpg" alt="鋁瓶" loading="lazy" onerror="this.parentElement.innerHTML='<div class=prod-img-placeholder><i class=bi bi-droplet-fill></i></div>'">
+        </div>
+        <div class="prod-body">
+          <h5 data-zh>鋁瓶 / 鍛材</h5><h5 data-en>Aluminum Bottles / Forging</h5>
+          <p data-zh>高合金鋁擠型材用於鋁瓶及航太鍛材，滿足高壓及高強度規格要求。</p>
+          <p data-en>High-alloy aluminum extrusion for aluminum bottles and aerospace forging materials meeting high-pressure and high-strength specifications.</p>
+          <span class="prod-tag" data-zh>航太 / 高合金</span><span class="prod-tag" data-en>Aerospace / High Alloy</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Application Tags -->
+    <div class="mt-4 text-center reveal">
+      <p class="text-muted mb-2" style="font-size:0.82rem">
+        <span data-zh>更多應用領域</span><span data-en>More Application Areas</span>
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center">
+        <span style="background:var(--ws-light);color:var(--ws-navy);font-size:0.78rem;padding:0.3rem 0.75rem;border-radius:3px;font-weight:600" data-zh>皮箱框</span>
+        <span style="background:var(--ws-light);color:var(--ws-navy);font-size:0.78rem;padding:0.3rem 0.75rem;border-radius:3px;font-weight:600" data-zh>建材</span>
+        <span style="background:var(--ws-light);color:var(--ws-navy);font-size:0.78rem;padding:0.3rem 0.75rem;border-radius:3px;font-weight:600" data-zh>淋浴門</span>
+        <span style="background:var(--ws-light);color:var(--ws-navy);font-size:0.78rem;padding:0.3rem 0.75rem;border-radius:3px;font-weight:600" data-zh>鋁帷牆</span>
+        <span style="background:var(--ws-light);color:var(--ws-navy);font-size:0.78rem;padding:0.3rem 0.75rem;border-radius:3px;font-weight:600" data-zh>汽機車零件</span>
+        <span style="background:var(--ws-light);color:var(--ws-navy);font-size:0.78rem;padding:0.3rem 0.75rem;border-radius:3px;font-weight:600" data-zh>車削用鋁</span>
+        <span style="background:var(--ws-light);color:var(--ws-navy);font-size:0.78rem;padding:0.3rem 0.75rem;border-radius:3px;font-weight:600" data-zh>戶外家具</span>
+        <span style="background:var(--ws-light);color:var(--ws-navy);font-size:0.78rem;padding:0.3rem 0.75rem;border-radius:3px;font-weight:600" data-en>Luggage Frames</span>
+        <span style="background:var(--ws-light);color:var(--ws-navy);font-size:0.78rem;padding:0.3rem 0.75rem;border-radius:3px;font-weight:600" data-en>Construction</span>
+        <span style="background:var(--ws-light);color:var(--ws-navy);font-size:0.78rem;padding:0.3rem 0.75rem;border-radius:3px;font-weight:600" data-en>Shower Doors</span>
+        <span style="background:var(--ws-light);color:var(--ws-navy);font-size:0.78rem;padding:0.3rem 0.75rem;border-radius:3px;font-weight:600" data-en>Curtain Walls</span>
+        <span style="background:var(--ws-light);color:var(--ws-navy);font-size:0.78rem;padding:0.3rem 0.75rem;border-radius:3px;font-weight:600" data-en>Auto Parts</span>
+        <span style="background:var(--ws-light);color:var(--ws-navy);font-size:0.78rem;padding:0.3rem 0.75rem;border-radius:3px;font-weight:600" data-en>Outdoor Furniture</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════
+  CERTIFICATIONS
+════════════════════════════════ -->
+<section id="certs">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <div class="sec-label" data-zh>認證與資質</div>
+      <div class="sec-label" data-en>CERTIFICATIONS</div>
+      <h2 class="sec-title">
+        <span data-zh>國際認可品質保證</span>
+        <span data-en>Internationally Recognized Quality</span>
+      </h2>
+      <div class="sec-bar mx-auto"></div>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-6 col-md-3 reveal">
+        <div class="cert-card">
+          <img src="images/iso9001.png" alt="ISO 9001:2015 品質管理系統認證" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <div class="cert-icon" style="display:none"><i class="bi bi-patch-check-fill"></i></div>
+          <h6>ISO 9001:2015</h6>
+          <p data-zh>品質管理系統認證</p>
+          <p data-en>Quality Management System</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 reveal">
+        <div class="cert-card">
+          <img src="images/iso9002.png" alt="UL-9002 美國認證" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <div class="cert-icon" style="display:none"><i class="bi bi-shield-check"></i></div>
+          <h6>UL-9002</h6>
+          <p data-zh>美國品質認證</p>
+          <p data-en>US Quality Certification</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 reveal">
+        <div class="cert-card">
+          <div class="cert-icon"><i class="bi bi-star-fill"></i></div>
+          <h6 data-zh>CNS 優良標誌</h6>
+          <h6 data-en>CNS Excellence Mark</h6>
+          <p data-zh>經濟部中央標準局認證（五項）</p>
+          <p data-en>Ministry of Economic Affairs (5 items)</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 reveal">
+        <div class="cert-card">
+          <div class="cert-icon"><i class="bi bi-shield-fill-check"></i></div>
+          <h6 data-zh>國防工業合格衛星工廠</h6>
+          <h6 data-en>Defense Qualified Factory</h6>
+          <p data-zh>通過國防部聯勤評鑑</p>
+          <p data-en>Passed Ministry of Defense evaluation</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════
+  CONTACT
+════════════════════════════════ -->
+<section id="contact">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <div class="sec-label" data-zh>聯絡我們</div>
+      <div class="sec-label" data-en>CONTACT US</div>
+      <h2 class="sec-title">
+        <span data-zh>立即取得報價</span>
+        <span data-en>Get In Touch</span>
+      </h2>
+      <div class="sec-bar mx-auto"></div>
+    </div>
+    <div class="row g-4">
+      <!-- Info -->
+      <div class="col-lg-5 reveal">
+        <div class="contact-card">
+          <div class="ci-row">
+            <div class="ci-icon"><i class="bi bi-geo-alt-fill"></i></div>
+            <div>
+              <h6 data-zh>公司地址</h6><h6 data-en>Address</h6>
+              <p data-zh>717台南市仁德區二行里<br>二仁路一段491巷31號</p>
+              <p data-en>No. 31, Ln. 491, Sec. 1, Erjin Rd.,<br>Rende Dist., Tainan City 717, Taiwan</p>
+            </div>
+          </div>
+          <div class="ci-row">
+            <div class="ci-icon"><i class="bi bi-telephone-fill"></i></div>
+            <div>
+              <h6 data-zh>電話</h6><h6 data-en>Phone</h6>
+              <p><a href="tel:+886-6-2662311">06-266-2311 / +886-6-2662311</a></p>
+            </div>
+          </div>
+          <div class="ci-row">
+            <div class="ci-icon"><i class="bi bi-printer-fill"></i></div>
+            <div>
+              <h6 data-zh>傳真</h6><h6 data-en>Fax</h6>
+              <p>06-266-4451 / +886-6-2664451</p>
+            </div>
+          </div>
+          <div class="ci-row">
+            <div class="ci-icon"><i class="bi bi-envelope-fill"></i></div>
+            <div>
+              <h6 data-zh>電子郵件</h6><h6 data-en>Email</h6>
+              <p><a href="mailto:sales@weishin.com">sales@weishin.com</a></p>
+            </div>
+          </div>
+          <div class="map-wrap">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.8!2d120.2074!3d22.9341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e77a0!2z5Y-w5Y2X5biC5Lq65b6F5Y2A!5e0!3m2!1szh-TW!2stw!4v1"
+              allowfullscreen loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="維新鋁業位置地圖 / WEISHIN Industry Location Map">
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="col-lg-7 reveal">
+        <div class="form-card">
+          <h5>
+            <i class="bi bi-send-fill me-2" style="color:var(--ws-gold)"></i>
+            <span data-zh>送出詢價單</span><span data-en>Send an Inquiry</span>
+          </h5>
+          <form action="contact_form_handler.asp" method="post">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label" data-zh>姓名 <span style="color:var(--ws-gold)">*</span></label>
+                <label class="form-label" data-en>Name <span style="color:var(--ws-gold)">*</span></label>
+                <input type="text" class="form-control" name="name" required placeholder="Your name">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" data-zh>公司名稱</label>
+                <label class="form-label" data-en>Company</label>
+                <input type="text" class="form-control" name="company" placeholder="Company name">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" data-zh>電子郵件 <span style="color:var(--ws-gold)">*</span></label>
+                <label class="form-label" data-en>Email <span style="color:var(--ws-gold)">*</span></label>
+                <input type="email" class="form-control" name="email" required placeholder="email@company.com">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" data-zh>聯絡電話</label>
+                <label class="form-label" data-en>Phone</label>
+                <input type="tel" class="form-control" name="phone" placeholder="+886-...">
+              </div>
+              <div class="col-12">
+                <label class="form-label" data-zh>詢問類別</label>
+                <label class="form-label" data-en>Inquiry Type</label>
+                <select class="form-select" name="subject">
+                  <option value="" data-zh>請選擇...</option>
+                  <option value="" data-en>Please select...</option>
+                  <option value="quote" data-zh>產品報價</option>
+                  <option value="quote" data-en>Product Quote</option>
+                  <option value="sample" data-zh>樣品申請</option>
+                  <option value="sample" data-en>Sample Request</option>
+                  <option value="catalog" data-zh>型錄索取</option>
+                  <option value="catalog" data-en>Catalog Request</option>
+                  <option value="tech" data-zh>技術諮詢</option>
+                  <option value="tech" data-en>Technical Consultation</option>
+                  <option value="other" data-zh>其他</option>
+                  <option value="other" data-en>Other</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label" data-zh>詢問內容 <span style="color:var(--ws-gold)">*</span></label>
+                <label class="form-label" data-en>Message <span style="color:var(--ws-gold)">*</span></label>
+                <textarea class="form-control" name="message" rows="5" required
+                  placeholder="Please describe your requirements including product specs, dimensions, quantity..."></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn-submit">
+                  <i class="bi bi-send me-2"></i>
+                  <span data-zh>送出詢問</span><span data-en>Send Inquiry</span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════
+  FOOTER
+════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="footer-brand" data-zh>維新鋁業股份有限公司</div>
+        <div class="footer-brand" data-en>WEISHIN Industry Co., Ltd.</div>
+        <p data-zh>維新品質，永續經營。累積逾50年技術傳承，以職人精神精進製造技術，為全球客戶提供最佳鋁擠型解決方案。</p>
+        <p data-en>WEISHIN Quality, Sustainable Management. 50+ years of technical heritage, providing the best aluminum extrusion solutions to customers worldwide.</p>
+        <div class="d-flex gap-2 mt-3">
+          <a href="#" class="social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="mailto:sales@weishin.com" class="social-btn" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 data-zh>快速連結</h6>
+        <h6 data-en>Quick Links</h6>
+        <a href="#about" class="fl" data-zh>關於維新</a>
+        <a href="#about" class="fl" data-en>About</a>
+        <a href="#history" class="fl" data-zh>維新歷史</a>
+        <a href="#history" class="fl" data-en>History</a>
+        <a href="#departments" class="fl" data-zh>部門介紹</a>
+        <a href="#departments" class="fl" data-en>Departments</a>
+        <a href="#products" class="fl" data-zh>產品應用</a>
+        <a href="#products" class="fl" data-en>Products</a>
+        <a href="#contact" class="fl" data-zh>聯絡我們</a>
+        <a href="#contact" class="fl" data-en>Contact</a>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 data-zh>部門</h6>
+        <h6 data-en>Departments</h6>
+        <a href="#departments" class="fl" data-zh>物料管理課</a>
+        <a href="#departments" class="fl" data-en>Raw Materials</a>
+        <a href="#departments" class="fl" data-zh>模具課</a>
+        <a href="#departments" class="fl" data-en>Die Shop</a>
+        <a href="#departments" class="fl" data-zh>擠型課</a>
+        <a href="#departments" class="fl" data-en>Extrusion</a>
+        <a href="#departments" class="fl" data-zh>高合金課</a>
+        <a href="#departments" class="fl" data-en>High Alloy</a>
+        <a href="#departments" class="fl" data-zh>品保部</a>
+        <a href="#departments" class="fl" data-en>Quality Assurance</a>
+      </div>
+      <div class="col-lg-4">
+        <h6 data-zh>聯絡資訊</h6>
+        <h6 data-en>Contact Info</h6>
+        <p style="font-size:0.83rem">
+          <i class="bi bi-geo-alt me-2" style="color:var(--ws-gold)"></i>
+          <span data-zh>717台南市仁德區二仁路一段491巷31號</span>
+          <span data-en>No.31, Ln.491, Sec.1, Erjin Rd., Rende, Tainan 717</span><br>
+          <i class="bi bi-telephone me-2" style="color:var(--ws-gold)"></i>
+          <a href="tel:+886-6-2662311" class="fl d-inline" style="font-size:0.83rem">06-266-2311</a><br>
+          <i class="bi bi-printer me-2" style="color:var(--ws-gold)"></i>06-266-4451<br>
+          <i class="bi bi-envelope me-2" style="color:var(--ws-gold)"></i>
+          <a href="mailto:sales@weishin.com" class="fl d-inline" style="font-size:0.83rem">sales@weishin.com</a>
+        </p>
+        <a href="#contact" class="btn-gold d-inline-flex mt-1" style="font-size:0.85rem;padding:0.6rem 1.25rem">
+          <i class="bi bi-envelope-fill me-2"></i>
+          <span data-zh>立即詢價</span><span data-en>Get a Quote</span>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <script>document.write(new Date().getFullYear())</script> 維新鋁業股份有限公司 WEISHIN Industry Co., Ltd. All rights reserved.</span>
+      <span style="color:rgba(255,255,255,0.3)" data-zh>請IT團隊更新 Google Maps 座標及表單後端</span>
+      <span style="color:rgba(255,255,255,0.3)" data-en>Please IT team update Google Maps coordinates and form backend</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button id="btt" aria-label="回到頂部"><i class="bi bi-chevron-up"></i></button>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // ── Language toggle ──
+  function toggleLang() {
+    const html = document.getElementById('htmlRoot');
+    const btn  = document.getElementById('langBtn');
+    const isZh = document.body.classList.contains('lang-zh');
+    document.body.classList.toggle('lang-zh', !isZh);
+    document.body.classList.toggle('lang-en', isZh);
+    html.lang = isZh ? 'en' : 'zh-Hant';
+    btn.textContent = isZh ? '中文' : 'ENG';
+    document.title = isZh
+      ? 'WEISHIN Industry Co., Ltd. | Taiwan Aluminum Extrusion Manufacturer'
+      : '維新鋁業 | 台灣高精密鋁擠型製造商 | WEISHIN Industry Co., Ltd.';
+  }
+
+  // ── Navbar scroll ──
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 50));
+
+  // ── Active nav on scroll ──
+  const sections = document.querySelectorAll('section[id]');
+  const links    = document.querySelectorAll('.nav-link[href^="#"]');
+  new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const a = document.querySelector(`.nav-link[href="#${e.target.id}"]`);
+        if (a) a.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-35% 0px -60% 0px' }).observe(... sections);
+  sections.forEach(s => new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const a = document.querySelector(`.nav-link[href="#${e.target.id}"]`);
+        if (a) a.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-35% 0px -60% 0px' }).observe(s));
+
+  // Reveal elements are always visible (CSS handles it)
+
+  // ── Back to top ──
+  const btt = document.getElementById('btt');
+  window.addEventListener('scroll', () => btt.classList.toggle('show', window.scrollY > 500));
+  btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  // ── Smooth anchor scroll ──
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'));
+      if (!t) return;
+      e.preventDefault();
+      window.scrollTo({ top: t.offsetTop - 68, behavior: 'smooth' });
+      const m = document.getElementById('navMenu');
+      if (m.classList.contains('show')) bootstrap.Collapse.getInstance(m)?.hide();
+    });
+  });
+</script>
+</body>
+</html>
